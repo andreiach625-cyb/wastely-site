@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politica privind trackerele și SDK-urile terțe — Wastely</title>
+<meta name="description" content="SDK-urile terțe folosite în aplicația Wastely și ce date prelucrează.">
+<meta name="theme-color" content="#1F7A4E">
+<link rel="canonical" href="https://wastely.ro/legal/trackers-policy.html">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="Wastely">
+<meta property="og:title" content="Politica privind trackerele și SDK-urile terțe — Wastely">
+<meta property="og:description" content="SDK-urile terțe folosite în aplicația Wastely și ce date prelucrează.">
+<meta property="og:url" content="https://wastely.ro/legal/trackers-policy.html">
+<meta property="og:image" content="https://wastely.ro/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#continut">Sari la conținut</a>
+<header class="site-header">
+<div class="wrap bar">
+<a class="brand" href="../"><img src="../assets/logo-512.png" alt="" width="40" height="40"><span>Wastely</span></a>
+<nav aria-label="Navigare principală">
+<a href="../#functii">Funcții</a>
+<a href="../#cum-functioneaza">Cum funcționează</a>
+<a href="../legal/">Documente legale</a>
+</nav>
+</div>
+</header>
+<main id="continut">
+<div class="wrap doc">
+<p class="crumbs"><a href="../">Acasă</a> › <a href="./">Documente legale</a></p>
+<h1>Politica privind trackerele și SDK-urile terțe</h1>
+<p class="updated">Ultima actualizare: 3 noiembrie 2026</p>
+<article class="card prose">
+<p>Un SDK este un modul software dezvoltat de altă companie și integrat în aplicație pentru o anumită funcție (de exemplu autentificarea). Mai jos găsești SDK-urile terțe din Wastely care transmit date în afara telefonului, ce fac și ce date folosesc.</p>
+<p><strong>Wastely nu folosește reclame și nici SDK-uri de analytics sau de urmărire a comportamentului.</strong></p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">SDK</th><th scope="col">Furnizor</th><th scope="col">La ce îl folosim</th><th scope="col">Ce date prelucrează</th><th scope="col">Politica furnizorului</th></tr></thead>
+<tbody>
+<tr><td data-label="SDK">Firebase Authentication</td><td data-label="Furnizor">Google</td><td data-label="La ce îl folosim">Crearea contului, autentificarea, schimbarea parolei și ștergerea contului</td><td data-label="Ce date prelucrează">email, nume/pseudonim, identificator cont, adresa IP la autentificare</td><td data-label="Politica furnizorului"><a href="https://firebase.google.com/support/privacy" rel="noopener" target="_blank">https://firebase.google.com/support/privacy</a></td></tr>
+<tr><td data-label="SDK">Cloud Firestore</td><td data-label="Furnizor">Google</td><td data-label="La ce îl folosim">Stocarea inventarului, a locațiilor, a alertelor de expirare și a profilului (regiunea UE „eur3”)</td><td data-label="Ce date prelucrează">datele introduse de tine în Aplicație</td><td data-label="Politica furnizorului"><a href="https://firebase.google.com/support/privacy" rel="noopener" target="_blank">https://firebase.google.com/support/privacy</a></td></tr>
+</tbody>
+</table></div>
+<h2>Module care rulează doar pe telefon</h2>
+<p>Următoarele module nu transmit date în afara telefonului:</p>
+<ul>
+<li><strong>Cameră (Expo Camera):</strong> citirea codurilor de bare. Imaginea este procesată doar pe telefon și nu se salvează.</li>
+<li><strong>Selector de imagini (Expo Image Picker):</strong> fotografiile de produs și poza de profil, păstrate doar pe telefon.</li>
+<li><strong>Stocare locală (AsyncStorage):</strong> preferințe și poza de profil, pe telefon.</li>
+<li><strong>Stocare securizată (Expo SecureStore):</strong> copia parolei contului, păstrată criptat în Android Keystore / iOS Keychain și ștearsă la deconectare.</li>
+<li><strong>Deblocare dispozitiv (Expo Local Authentication):</strong> cere sistemului de operare să confirme deblocarea telefonului înainte de afișarea parolei. Aplicația nu primește date biometrice.</li>
+<li><strong>Mesaje către noi (Expo Mail Composer, Expo Document Picker):</strong> deschid aplicația de email a telefonului cu mesajul completat și, la cerere, cu fișierul ales de tine. Mesajul pleacă numai dacă îl trimiți tu din aplicația de email; Aplicația nu transmite nimic în fundal.</li>
+<li><strong>Notificări locale (Expo Notifications):</strong> alertele de expirare sunt programate și afișate de telefon. Nu se folosește un serviciu de notificări push și nu se transmit token-uri sau alte date către terți.</li>
+</ul>
+<h2>Permisiunile cerute pe telefon</h2>
+<ul>
+<li><strong>Cameră:</strong> pentru scanarea codurilor de bare și fotografiile de produs.</li>
+<li><strong>Galerie foto:</strong> doar dacă alegi o fotografie existentă pentru un produs sau pentru profil.</li>
+<li><strong>Notificări:</strong> pentru alertele de expirare, cerută la prima adăugare a unui produs.</li>
+<li><strong>Amprentă / față (doar pe iOS, Face ID):</strong> pentru confirmarea deblocării telefonului la afișarea parolei.</li>
+</ul>
+<p>Le poți retrage oricând din setările telefonului. Fără acces la cameră nu vei putea scana coduri.</p>
+<h2>Actualizări</h2>
+<p>Când adăugăm sau eliminăm un SDK, actualizăm această pagină.</p>
+</article>
+
+<p class="back"><a href="./">← Toate documentele legale</a></p>
+</div>
+</main>
+<footer class="site-footer">
+<div class="wrap foot">
+<div>
+<strong>CYBER SALES SRL</strong><br>
+CUI 50233851 · Nr. Reg. Com. J2024000328364<br>
+Sat Maliuc, Comuna Maliuc, Str. Berzelor, Nr. 6, Jud. Tulcea
+</div>
+<div>
+<strong>Contact</strong><br>
+<a href="mailto:shop.comenzi@gmail.com">shop.comenzi@gmail.com</a><br>
+<a href="tel:+40755482293">0755 482 293</a>
+</div>
+<div>
+<strong>Legal</strong><br>
+<a href="../legal/privacy-policy.html">Confidențialitate</a> · <a href="../legal/terms.html">Termeni</a><br>
+<a href="../legal/delete-account.html">Ștergerea contului</a> · <a href="../legal/">Toate documentele</a>
+</div>
+</div>
+<p class="wrap copy">© 2026 CYBER SALES SRL. Wastely este un instrument de organizare: datele de expirare sunt orientative. Site fără cookie-uri și fără urmărire.</p>
+</footer>
+</body>
+</html>
